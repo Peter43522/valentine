@@ -1,28 +1,18 @@
-
 body {
   background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
   font-family: 'Arial', sans-serif;
   text-align: center;
-  margin-top: 50px;
+  margin: 0;
+  padding: 20px;
   overflow-x: hidden;
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
 }
 
-
-.cat-doodle {
-  font-size: 60px;
+.big-text {
+  font-size: 36px;
   margin-bottom: 20px;
-  animation: moveCat 3s infinite alternate;
 }
-
-
-@keyframes moveCat {
-  0% { transform: translateX(0); }
-  50% { transform: translateX(20px); }
-  100% { transform: translateX(0); }
-}
-
 
 button {
   padding: 15px 40px;
@@ -35,68 +25,40 @@ button {
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.yes-button {
-  background: linear-gradient(45deg, #ff6a88, #ff99ac);
-}
+.yes-button { background: linear-gradient(45deg, #ff6a88, #ff99ac);}
+.no-button { background: linear-gradient(45deg, #6a11cb, #2575fc);}
+.back-button { background: linear-gradient(45deg, #666, #999);}
 
-.no-button {
-  background: linear-gradient(45deg, #6a11cb, #2575fc);
-}
+button:hover { transform: scale(1.1); box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
 
-button:hover {
-  transform: scale(1.1);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-}
-
+.cat-doodle { animation: moveCat 3s infinite alternate; margin-bottom: 20px; }
+@keyframes moveCat { 0% { transform: translateX(0);} 50% { transform: translateX(20px);} 100% { transform: translateX(0);} }
 
 .heart {
   position: absolute;
-  font-size: 20px;
+  width: 20px; height: 20px;
+  background: red;
+  clip-path: polygon(50% 0%,61% 13%,75% 12%,87% 25%,100% 50%,87% 75%,75% 88%,61% 87%,50% 100%,39% 87%,25% 88%,13% 75%,0% 50%,13% 25%,25% 12%,39% 13%);
   animation: fall 5s linear infinite;
 }
+@keyframes fall {0% {transform: translateY(-50px); opacity:1;} 100% {transform: translateY(100vh); opacity:0;}}
 
-@keyframes fall {
-  0% { transform: translateY(-50px); opacity: 1; }
-  100% { transform: translateY(100vh); opacity: 0; }
+.star {
+  position: absolute;
+  width: 10px; height: 10px;
+  background: yellow;
+  clip-path: polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);
+  animation: fallStar 4s linear infinite;
 }
+@keyframes fallStar {0% {transform: translateY(-20px);} 100% {transform: translateY(100vh);}}
 
+.gift-container { display: flex; justify-content: center; gap: 30px; margin-top: 20px; }
+.gift svg { cursor: pointer; transition: transform 0.3s; }
+.gift svg:hover { transform: scale(1.2) rotate(5deg); }
 
-button:hover {
-  transform: scale(1.1);
-}
+.gift-center { display: flex; flex-direction: column; align-items: center; margin-top: 20px; }
+.message-space { margin-top: 20px; font-size: 20px; }
+textarea { font-size: 18px; padding: 5px; }
 
-/* yes.html */
-.choose-text {
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-.gift-container {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 20px;
-}
-
-.gift {
-  font-size: 50px;
-  cursor: pointer;
-  transition: transform 0.3s, rotate 0.3s;
-}
-
-.gift:hover {
-  transform: scale(1.3) rotate(10deg);
-}
-
-
-body p {
-  font-size: 22px;
-  animation: pulse 1s infinite;
-}
-
-@keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.2); }
-}
 
 
