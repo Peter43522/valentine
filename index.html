@@ -7,21 +7,29 @@
 </head>
 <body>
 
-  <!-- Pisicuță doodle sus -->
-  <div class="cat-doodle">😺❤️</div>
+  <!-- Pisicuță doodle SVG -->
+  <svg class="cat-doodle" width="100" height="100" viewBox="0 0 64 64">
+    <circle cx="32" cy="32" r="30" fill="#ffd699" stroke="#000" stroke-width="2"/>
+    <circle cx="22" cy="28" r="5" fill="#000"/>
+    <circle cx="42" cy="28" r="5" fill="#000"/>
+    <path d="M22 42 Q32 50 42 42" stroke="#000" stroke-width="2" fill="transparent"/>
+    <polygon points="12,20 22,28 12,36" fill="#ffd699" stroke="#000"/>
+    <polygon points="52,20 42,28 52,36" fill="#ffd699" stroke="#000"/>
+  </svg>
 
-  <h1>Will you be my Valentine? 💖</h1>
+  <h1 class="big-text">Will you be my Valentine? 💖</h1>
 
   <div class="buttons">
     <button class="yes-button" onclick="handleYesClick()">YES</button>
     <button class="no-button" onclick="handleNoClick()">NO</button>
   </div>
 
-  <!-- Container pentru inimioare cad -->
+  <!-- Container inimioare cad -->
   <div id="hearts-container"></div>
 
   <script src="script.js"></script>
 </body>
 </html>
+
 
 
