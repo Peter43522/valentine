@@ -1,14 +1,46 @@
+/* Fundal și text */
 body {
   background: #ffe6eb;
   font-family: Arial, sans-serif;
   text-align: center;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
+/* Butoane */
 button {
-  padding: 15px 30px;
+  padding: 15px 40px;
   font-size: 22px;
   margin: 15px;
   cursor: pointer;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.yes-button {
+  background: linear-gradient(45deg, #ff5f6d, #ffc371);
+}
+
+.no-button {
+  background: linear-gradient(45deg, #36d1dc, #5b86e5);
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Animatie pentru pisicuța jos */
+.bottom-img {
+  width: 180px;
+  margin-top: 40px;
+  animation: bounce 2s infinite;
+}
+
+/* Bounce animation */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
 }
 
