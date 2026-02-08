@@ -3,8 +3,10 @@ const heartsContainer = document.getElementById("hearts-container");
 if (heartsContainer) {
   function createHeart() {
     const heart = document.createElement("div");
-    heart.classList.add("heart");
+    heart.classList.add("heart-emoji");
+    heart.textContent = "❤️"; // emoji inima
     heart.style.left = Math.random() * window.innerWidth + "px";
+    heart.style.fontSize = 20 + Math.random() * 20 + "px";
     heart.style.animationDuration = 3 + Math.random() * 3 + "s";
     heartsContainer.appendChild(heart);
     setTimeout(() => heart.remove(), 6000);
@@ -37,6 +39,7 @@ function handleNoClick() {
 function handleYesClick() {
   window.location.href = "yes.html";
 }
+
 
 
 
