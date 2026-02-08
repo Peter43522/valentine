@@ -59,6 +59,34 @@ button:hover { transform: scale(1.1); box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
 .gift-center { display: flex; flex-direction: column; align-items: center; margin-top: 20px; }
 .message-space { margin-top: 20px; font-size: 20px; }
 textarea { font-size: 18px; padding: 5px; }
+.gift-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.message-space {
+  margin-top: 20px;
+  text-align: center; /* CENTRAT text si textarea */
+}
+
+.letter-greeting {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+textarea {
+  font-size: 18px;
+  padding: 5px;
+  text-align: center; /* text scris centrat */
+  border-radius: 8px;
+  border: 1px solid #aaa;
+  resize: none;
+}
+
 
 
 
