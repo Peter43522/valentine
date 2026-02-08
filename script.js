@@ -8,6 +8,6 @@ function handleNoClick() {
 }
 
 function handleYesClick() {
-  alert("YAY 💖");
+  window.location.href = "yes.html";
 }
 
