@@ -11,3 +11,4 @@ function handleYesClick() {
   window.location.href = "yes.html";
 }
 
+
