@@ -1,4 +1,4 @@
-
+// Hearts rain for index.html
 const heartsContainer = document.getElementById("hearts-container");
 if (heartsContainer) {
   function createHeart() {
@@ -12,6 +12,7 @@ if (heartsContainer) {
   setInterval(createHeart, 300);
 }
 
+// Stars rain for yes.html
 const starsContainer = document.getElementById("stars-container");
 if (starsContainer) {
   function createStar() {
@@ -26,6 +27,7 @@ if (starsContainer) {
   setInterval(createStar, 300);
 }
 
+// YES / NO buttons logic
 function handleNoClick() {
   const yesButton = document.querySelector('.yes-button');
   const currentSize = parseFloat(window.getComputedStyle(yesButton).fontSize);
