@@ -1,12 +1,29 @@
-/* Fundal și text */
+
 body {
-  background: #ffe6eb;
-  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+  font-family: 'Arial', sans-serif;
   text-align: center;
   margin-top: 50px;
+  overflow-x: hidden;
+  position: relative;
+  height: 100vh;
 }
 
-/* Butoane */
+
+.cat-doodle {
+  font-size: 60px;
+  margin-bottom: 20px;
+  animation: moveCat 3s infinite alternate;
+}
+
+
+@keyframes moveCat {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(20px); }
+  100% { transform: translateX(0); }
+}
+
+
 button {
   padding: 15px 40px;
   font-size: 22px;
@@ -19,11 +36,11 @@ button {
 }
 
 .yes-button {
-  background: linear-gradient(45deg, #ff5f6d, #ffc371);
+  background: linear-gradient(45deg, #ff6a88, #ff99ac);
 }
 
 .no-button {
-  background: linear-gradient(45deg, #36d1dc, #5b86e5);
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
 }
 
 button:hover {
@@ -31,16 +48,55 @@ button:hover {
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
-/* Animatie pentru pisicuța jos */
-.bottom-img {
-  width: 180px;
-  margin-top: 40px;
-  animation: bounce 2s infinite;
+
+.heart {
+  position: absolute;
+  font-size: 20px;
+  animation: fall 5s linear infinite;
 }
 
-/* Bounce animation */
-@keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+@keyframes fall {
+  0% { transform: translateY(-50px); opacity: 1; }
+  100% { transform: translateY(100vh); opacity: 0; }
 }
+
+
+button:hover {
+  transform: scale(1.1);
+}
+
+/* yes.html */
+.choose-text {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.gift-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.gift {
+  font-size: 50px;
+  cursor: pointer;
+  transition: transform 0.3s, rotate 0.3s;
+}
+
+.gift:hover {
+  transform: scale(1.3) rotate(10deg);
+}
+
+
+body p {
+  font-size: 22px;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
 
