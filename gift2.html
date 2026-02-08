@@ -2,11 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>📜 Letter</title>
+  <title>📜 Scrisoare</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Yay! 📜</h1>
-  <p>Write your special message here ✍️</p>
+  <h1 class="big-text">📜 Your Letter</h1>
+
+  <div class="gift-center">
+    <!-- Scrisoare doodle SVG -->
+    <svg width="120" height="120" viewBox="0 0 64 64">
+      <rect x="10" y="10" width="44" height="44" fill="#fff" stroke="#000" stroke-width="2"/>
+      <line x1="10" y1="10" x2="54" y2="54" stroke="#000"/>
+      <line x1="54" y1="10" x2="10" y2="54" stroke="#000"/>
+    </svg>
+    <div class="message-space">
+      <p class="letter-greeting">Myy loveee,</p>
+      <textarea placeholder="" rows="4" cols="30"></textarea>
+    </div>
+  </div>
+
+  <button class="back-button" onclick="window.location.href='yes.html'">⬅ Back</button>
 </body>
 </html>
+
